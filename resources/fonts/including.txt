@@ -1,0 +1,20 @@
+Only providing .ttf file for webfont won't be good enough for cross-browser support. The best possible combination at present is using the combination as :
+
+@font-face {
+  font-family: 'MyWebFont';
+  src: url('webfont.eot'); /* IE9 Compat Modes */
+  src: url('webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('webfont.woff') format('woff'), /* Modern Browsers */
+       url('webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+This code assumes you have .eot , .woff , .ttf and svg format for you webfont. To automate all this process , you can use : Font-Squirrel : Web Font Generator.
+
+Also , modern browsers are shifting towards .woff font , so you can probably do this too : :
+
+@font-face {
+  font-family: 'MyWebFont';
+  src: url('myfont.woff') format('woff'), /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+   url('myfont.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}  
+Read more here : http://css-tricks.com/snippets/css/using-font-face/
