@@ -7,17 +7,6 @@
     url('resources/fonts/wavehaussans.svg#svgFontName') format('svg'); /* Legacy iOS */
 }
 
-#liwrap {
-    border-radius: 40px !important;
-    background-color: forestgreen !important;
-    width: auto !important;
-    height: 30px !important;
-    line-height: 100%;
-    margin-top: 4px;
-}
-#listings {
-    color: whitesmoke !important;
-}
 
 .navbar-nav.ml-auto li a {
     color: #8A2BE2 !important;
