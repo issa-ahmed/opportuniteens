@@ -7,15 +7,35 @@
     url('resources/fonts/wavehaussans.svg#svgFontName') format('svg'); /* Legacy iOS */
 }
 
+#liwrap {
+    border-radius: 40px !important;
+    background-color: forestgreen !important;
+    width: auto !important;
+    height: 30px !important;
+    line-height: 100%;
+    margin-top: 4px;
+}
+#listings {
+    color: whitesmoke !important;
+}
+
 .navbar-nav.ml-auto li a {
     color: #8A2BE2 !important;
     font-family: "Wavehaus Sans", sans-serif;
     font-size: 17px !important;
+    font-style: italic;
+    transition: all .2s ease-in-out;
 }
+.navbar-nav.ml-auto li a:hover {
+    color: #BD75FF !important;
+    transform: scale(1.1);
+}
+
+
 .navbar-brand {
     color: #8A2BE2 !important;
     font-family: "Wavehaus Sans", sans-serif;
     font-style: italic;
-    text-shadow: 1px 2px #000000;
+    text-shadow: 1px 1px #000000;
     font-size: 25px !important;
 }
