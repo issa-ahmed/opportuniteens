@@ -25,10 +25,10 @@
                     <a class="nav-link" href="#" id="listing">post a listing</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">contact</a>
+                    <a class="nav-link" href="#" id="contact">contact</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">about</a>
+                    <a class="nav-link" href="#" id="about">about</a>
                 </li>
             </ul>
         </div>
@@ -37,39 +37,47 @@
     <div id="home">
 
     </div>
-    <div id="wrap">
-        <h1 id="jobslogo">Jobs</h1>
 
-        <form autocomplete="off">
 
-            <div class="form-group">
-                <label for="formSelectTime" id="timeLabel">Time</label>
-                <select class="form-control" id="formSelectTime">
-                    <option></option>
-                    <option>Full-Time</option>
-                    <option>Part-Time</option>
-                    <option>One-Time</option>
-                </select>
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-sm" id="wrap">
+                <h1>Jobs</h1>
+
+                <form autocomplete="off">
+                    <div class="form-group">
+                        <label for="formSelectTime" id="timeLabel">Time</label>
+                        <select class="form-control" id="formSelectTime">
+                            <option></option>
+                            <option>Full-Time</option>
+                            <option>Part-Time</option>
+                            <option>One-Time</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="formInputLoc" id="locationLabel">Location</label>
+                        <input id="formInputLoc" type="text" class="form-control" placeholder="Zip Code here...">
+                    </div>
+                    <div class="form-group">
+                        <label for="formSelectLength" id="lengthLabel">Distance</label>
+                        <select class="form-control" id="formSelectLength">
+                            <option></option>
+                            <option>5 miles or less</option>
+                            <option>10 miles or less</option>
+                            <option>25 miles or less</option>
+                            <option>50 miles or more</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="formInputKey" id="keywordLabel">Keywords</label>
+                        <input id="formInputKey" type="text" class="form-control" placeholder="Keywords...">
+                    </div>
+                </form>
+
             </div>
-            <div class="form-group">
-                <label for="formInputLoc" id="locationLabel">Location</label>
-                <input id="formInputLoc" type="text" class="form-control" placeholder="Zip Code here...">
-            </div>
-            <div class="form-group">
-                <label for="formSelectLength" id="lengthLabel">Distance</label>
-                <select class="form-control" id="formSelectLength">
-                    <option></option>
-                    <option>5 miles or less</option>
-                    <option>10 miles or less</option>
-                    <option>25 miles or less</option>
-                    <option>50 miles or more</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="formInputKey" id="keywordLabel">Keywords</label>
-                <input id="formInputKey" type="text" class="form-control" placeholder="Keywords...">
-            </div>
-        </form>
+        </div>
+
 
     </div>
 </body>

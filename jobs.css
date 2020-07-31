@@ -60,42 +60,49 @@ html, body {
     display: table !important;
     height: 100% !important;
     width: 100% !important;
-    position: relative !important;
+    position: absolute !important;
     background-size: cover !important;
 }
-
 #wrap {
     z-index: 2 !important;
-    height: 60%;
-    width: 60%;
+    display: table;
     position: absolute;
-    top: 20%;
-    left: 20%;
+    height: 55%;
+    width: 55%;
     background-color: white;
     border-radius: 30px;
+    top: 20vh;
+    left: 20vw;
 }
-#jobslogo {
-    margin-left: 20px;
-    margin-top: 10px;
-    font-family: "Gordita", sans-serif;
+
+
+@media (max-width: 700px) {
+    #listing {
+        width: 40%;
+        text-align: center;
+    }
+    #contact, #about {
+        margin-left: 11px !important;
+    }
+
 }
-#timeLabel, #formSelectTime {
-    width: 95% !important;
-    margin-left: 10px;
-    font-family: "Gordita", sans-serif !important;
+@media (max-width: 699px) {
+    #listing {
+        width: 100%;
+        text-align: center;
+    }
+    #contact, #about {
+        margin-left: 11px !important;
+    }
 }
-#locationLabel, #formInputLoc {
-    width: 95% !important;
-    margin-left: 10px;
-    font-family: "Gordita", sans-serif !important;
+@media (max-width: 576px) {
+    #listing {
+        width: 25%;
+        text-align: center;
+    }
+    #contact, #about {
+        margin-left: 11px !important;
+    }
 }
-#lengthLabel, #formSelectLength {
-    width: 95% !important;
-    margin-left: 10px;
-    font-family: "Gordita", sans-serif !important;
-}
-#keywordLabel, #formInputKey {
-    width: 95% !important;
-    margin-left: 10px;
-    font-family: "Gordita", sans-serif !important;
-}
+
+
