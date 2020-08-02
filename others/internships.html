@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, inital-scale=1">
+    <title>internships</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.4.4/umd/popper.min.js" integrity="sha512-eUQ9hGdLjBjY3F41CScH3UX+4JDSI9zXeroz7hJ+RteoCaY+GP/LDoM8AO+Pt+DRFw3nXqsjh9Zsts8hnYv8/A==" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+    <link rel="stylesheet" href="volunteering.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-sm fixed-top navbar-dark bg-dark">
+    <a id="logotext" href="../index.html" class="navbar-brand">opportuniteens</a>
+    <button class="navbar-toggler" data-toggle="collapse" data-target="#menuItems">
+        <span class="navbar-toggler-icon" ></span>
+    </button>
+    <div class="collapse navbar-collapse" id="menuItems">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#" id="listing">post a listing</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" id="contact">contact</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" id="about">about</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div id="home">
+
+</div>
+
+
+<div class="container-fluid">
+
+    <div class="row">
+        <div class="col-sm" id="wrap">
+            <h1>Internships</h1>
+
+            <form autocomplete="off">
+                <div class="form-group">
+                    <label for="formSelectTime" id="timeLabel">Price</label>
+                    <select class="form-control" id="formSelectTime">
+                        <option></option>
+                        <option>Paid</option>
+                        <option>Unpaid</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="formInputLoc" id="locationLabel">Location</label>
+                    <input id="formInputLoc" type="text" class="form-control" placeholder="Zip Code here...">
+                </div>
+                <div class="form-group">
+                    <label for="formSelectLength" id="lengthLabel">Distance</label>
+                    <select class="form-control" id="formSelectLength">
+                        <option></option>
+                        <option>5 miles or less</option>
+                        <option>10 miles or less</option>
+                        <option>25 miles or less</option>
+                        <option>50 miles or more</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="formInputKey" id="keywordLabel">Keywords</label>
+                    <input id="formInputKey" type="text" class="form-control" placeholder="Keywords...">
+                </div>
+            </form>
+            <a id="searchButton" href="#" class="btn btn-primary btn-md"><img id="searchIcon" src="../resources/imgs/search-24px.svg">Search</a>
+        </div>
+    </div>
+
+
+</div>
+</body>
+</html>

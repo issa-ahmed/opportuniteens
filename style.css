@@ -15,6 +15,22 @@
     url('resources/fonts/gordita/gordita.svg#svgFontName') format('svg'); /* Legacy iOS */
 }
 
+body {
+    overflow-y:hidden;
+}
+html, body {
+    height: 100% !important;
+    width: 100% !important;
+    font-family: sans-serif;
+}
+#home {
+    background: url("resources/imgs/nightsky.jpg") no-repeat 50% 50% !important;
+    display: table !important;
+    height: 100% !important;
+    width: 100% !important;
+    position: relative !important;
+    background-size: cover !important;
+}
 
 .navbar-nav.ml-auto li a {
     color: #ffffff !important;
@@ -25,40 +41,27 @@
 }
 .navbar-nav.ml-auto li a:hover {
     color: #e7e7e7 !important;
-    transform: scale(1.02);
+    transform: scale(1.1);
 }
-
 .navbar {
-    background-image: linear-gradient(-90deg, #00bfff, #df73ff) !important;
+    color: #121212 !important;
 }
 .navbar-brand {
-    color: #ffffff !important;
+    color: white !important;
     font-family: "Wavehaus Sans", sans-serif;
     font-style: italic;
-    text-shadow: 1px 1px #000000;
+    /*text-shadow: 1px 1px #ffffff;*/
     font-size: 25px !important;
 }
-body {
-    overflow-y:hidden;
-}
-html, body {
-    height: 100% !important;
-    width: 100% !important;
-    font-family: sans-serif;
-}
 
-#home {
-    background: url("resources/imgs/sky.jpg") no-repeat 50% 50% !important;
-    display: table !important;
-    height: 100% !important;
-    width: 100% !important;
-    position: relative !important;
-    background-size: cover !important;
+#listing {
+    background-color: #07B9C6;
+    color: white !important;
+    border-radius: 40px;
 }
-.landing-text {
-    display: table-cell !important;
-    text-align: center !important;
-    vertical-align: middle !important;
+#listing:hover {
+    background-color: white;
+    color: black !important;
 }
 
 #middleLogo {
@@ -66,32 +69,35 @@ html, body {
     font-size: 600%;
     line-height: .8;
     font-weight: bolder;
-    color: black !important;
+    color: white !important;
 }
+.landing-text {
+    display: table-cell !important;
+    text-align: center !important;
+    vertical-align: middle !important;
+}
+
 #subtext {
     padding-top: 30px;
     font-family: "Gordita", sans-serif !important;
     margin-bottom: -20px !important;
-    color: black !important;
+    color: white !important;
 }
-#listing {
-    background-color: white;
-    color: #31AEFF !important;
-    border-radius: 40px;
-}
-#listing:hover {
-    background-color: rgb(101,157,255);
-    color: lightgray !important;
-}
-.btn-primary  {
+
+.btn-primary {
     font-family: "Gordita", sans-serif;
     background-color: white !important;
     color: black !important;
     margin-top: 20px !important;
+    margin-left: 10px;
+    transition: all .2s ease-in-out;
 }
 .btn-primary:hover {
     background-color: #636c72 !important;
+    transform: scale(1.05);
 }
+
+
 
 @media (max-width: 700px) {
     #middleLogo {
@@ -119,6 +125,9 @@ html, body {
     #contact, #about {
         margin-left: 11px !important;
     }
+    .navbar-nav.ml-auto li a:hover {
+        transform: scale(1.02);
+    }
 }
 @media (max-width: 576px) {
     #middleLogo {
@@ -136,5 +145,29 @@ html, body {
     }
     #contact, #about {
         margin-left: 11px !important;
+    }
+    .navbar-nav.ml-auto li a:hover {
+        transform: scale(1.02);
+    }
+}
+@media (max-width: 320px){
+    #middleLogo {
+        font-size: 240%;
+    }
+    #subtext {
+        font-size: 105%;
+    }
+    .btn-primary {
+        font-size: 75%;
+    }
+    #listing {
+        width: 42%;
+        text-align: center;
+    }
+    #contact, #about {
+        margin-left: 11px !important;
+    }
+    .navbar-nav.ml-auto li a:hover {
+        transform: scale(1.02);
     }
 }
