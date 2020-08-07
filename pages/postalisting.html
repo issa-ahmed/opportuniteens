@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, inital-scale=1">
+    <title>post a listing</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.4.4/umd/popper.min.js" integrity="sha512-eUQ9hGdLjBjY3F41CScH3UX+4JDSI9zXeroz7hJ+RteoCaY+GP/LDoM8AO+Pt+DRFw3nXqsjh9Zsts8hnYv8/A==" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+    <script src="postalisting.js"></script>
+    <link rel="stylesheet" href="search.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-sm fixed-top navbar-dark bg-dark">
+        <a id="logotext" href="../index.html" class="navbar-brand">opportuniteens</a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#menuItems">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menuItems">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="postalisting.html" id="listing">post a listing</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div id="home">
+
+    </div>
+
+
+    <div class="container-fluid" id="container">
+        <div class="row" id="middle">
+            <div class="col-sm" id="wrap">
+                <h1>Post a Listing</h1>
+                <form autocomplete="off">
+                    <div class="form-group">
+                        <label for="formSelectCat" id="catLabel">Listing Category</label>
+                        <select class="form-control" id="formSelectCat">
+                            <option value="0"></option>
+                            <option value="1">Job</option>
+                            <option value="2">Volunteering</option>
+                            <option value="3">Internship</option>
+                            <option value="4">Extracurricular</option>
+                            <option value="5">Guidance</option>
+                        </select>
+                    </div>
+
+                    <div id="jobsS">
+                        <div class="form-group">
+                            <label for="formInputName" id="nameLabel">Name of Job</label>
+                            <input id="formInputName" type="text" class="form-control" placeholder="Name...">
+                        </div>
+                        <div class="form-group">
+                            <label for="formSelectCommit" id="commitLabel">Commitment Type</label>
+                            <select class="form-control" id="formSelectCommit">
+                                <option></option>
+                                <option>Full-Time</option>
+                                <option>Part-Time</option>
+                                <option>One-Time</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="formInputPay" id="payLabel">Pay per Hour</label>
+                            <input type="text" id="formInputPay" class="form-control" placeholder="12.00">
+                        </div>
+                        <div class="form-group">
+                            <label for="formInputEmp" id="empLabel">Name of Employer</label>
+                            <input id="formInputEmp" type="text" class="form-control" placeholder="Employer...">
+                        </div>
+                        <div class="form-group">
+                            <label for="formInputAdd" id="addLabel">Address of Job</label>
+                            <input id="formInputAdd" type="text" class="form-control" placeholder="Address...">
+                        </div>
+                        <div class="form-group">
+                            <label for="formInputPhone" id="phoneLabel">Phone Number</label>
+                            <input id="formInputPhone" type="tel" onkeyup="formatPhone(this)" class="form-control" placeholder="(xxx)-xxx-xxxx">
+                        </div>
+                        <div class="form-group">
+                            <label for="formInputEmail" id="emailLabel">Email</label>
+                            <input id="formInputEmail" type="email" title="Please provide a valid email address." class="form-control" placeholder="Email...">
+                        </div>
+                        <div class="form-group">
+                            <label for="formInputDesc" id="descLabel">Description</label>
+                            <textarea id="formInputDesc" rows="5" placeholder="Description..." class="form-control"></textarea>
+                        </div>
+                    </div>
+
+                    <div id="volunteeringS">
+                        <div class="form-group">
+                            <label for="formInputName" id="nameLabel">Name of Volunteering Opportunity</label>
+                            <input id="formInputName" type="text" class="form-control" placeholder="Name...">
+                        </div>
+                        <div class="form-group">
+                            <label for="formSelectCommit" id="commitLabel">Commitment Type</label>
+                            <select class="form-control" id="formSelectCommit">
+                                <option></option>
+                                <option>One-Time</option>
+                                <option>Commitment</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="formInputEmp" id="empLabel">Name of Employer</label>
+                            <input id="formInputEmp" type="text" class="form-control" placeholder="Employer...">
+                        </div>
+                        <div class="form-group">
+                            <label for="formInputAdd" id="addLabel">Address of Opportunity</label>
+                            <input id="formInputAdd" type="text" class="form-control" placeholder="Address...">
+                        </div>
+                        <div class="form-group">
+                            <label for="formInputPhone" id="phoneLabel">Phone Number</label>
+                            <input id="formInputPhone" type="tel" onkeyup="formatPhone(this)" class="form-control" placeholder="(xxx)-xxx-xxxx">
+                        </div>
+                        <div class="form-group">
+                            <label for="formInputEmail" id="emailLabel">Email</label>
+                            <input id="formInputEmail" type="email" title="Please provide a valid email address." class="form-control" placeholder="Email...">
+                        </div>
+                        <div class="form-group">
+                            <label for="formInputDesc" id="descLabel">Description</label>
+                            <textarea id="formInputDesc" rows="5" placeholder="Description..." class="form-control"></textarea>
+                        </div>
+                    </div>
+
+                    <div id="internshipsS">
+                        <div class="form-group">
+                            <label for="formInputName" id="nameLabel">Name of Internship</label>
+                            <input id="formInputName" type="text" class="form-control" placeholder="Name...">
+                        </div>
+                        <div class="form-group">
+                            <label for="formSelectPriceI" id="priceILabel">Price</label>
+                            <select class="form-control" id="formSelectPriceI">
+                                <option value="0"></option>
+                                <option value="1">Paid</option>
+                                <option value="2">Unpaid</option>
+                            </select>
+                        </div>
+                        <div id="payperhour">
+                            <div class="form-group">
+                                <label for="formInputPay" id="payLabel">Pay per Hour</label>
+                                <input type="text" id="formInputPay" class="form-control" placeholder="12.00">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="formInputEmp" id="empLabel">Name of Employer</label>
+                            <input id="formInputEmp" type="text" class="form-control" placeholder="Employer...">
+                        </div>
+                        <div class="form-group">
+                            <label for="formInputAdd" id="addLabel">Address of Internship</label>
+                            <input id="formInputAdd" type="text" class="form-control" placeholder="Address...">
+                        </div>
+                        <div class="form-group">
+                            <label for="formInputPhone" id="phoneLabel">Phone Number</label>
+                            <input id="formInputPhone" type="tel" onkeyup="formatPhone(this)" class="form-control" placeholder="(xxx)-xxx-xxxx">
+                        </div>
+                        <div class="form-group">
+                            <label for="formInputEmail" id="emailLabel">Email</label>
+                            <input id="formInputEmail" type="email" title="Please provide a valid email address." class="form-control" placeholder="Email...">
+                        </div>
+                        <div class="form-group">
+                            <label for="formInputDesc" id="descLabel">Description</label>
+                            <textarea id="formInputDesc" rows="5" placeholder="Description..." class="form-control"></textarea>
+                        </div>
+                    </div>
+
+                    <div id="extracurricularsS">
+                        <div class="form-group">
+                            <label for="formInputName" id="nameLabel">Name of Extracurricular</label>
+                            <input id="formInputName" type="text" class="form-control" placeholder="Name...">
+                        </div>
+                        <div class="form-group">
+                            <label for="formInputEmp" id="empLabel">Name of Employer</label>
+                            <input id="formInputEmp" type="text" class="form-control" placeholder="Employer...">
+                        </div>
+                        <div class="form-group">
+                            <label for="formInputAdd" id="addLabel">Address of Job</label>
+                            <input id="formInputAdd" type="text" class="form-control" placeholder="Address...">
+                        </div>
+                        <div class="form-group">
+                            <label for="formInputPhone" id="phoneLabel">Phone Number</label>
+                            <input id="formInputPhone" type="tel" onkeyup="formatPhone(this)" class="form-control" placeholder="(xxx)-xxx-xxxx">
+                        </div>
+                        <div class="form-group">
+                            <label for="formInputEmail" id="emailLabel">Email</label>
+                            <input id="formInputEmail" type="email" title="Please provide a valid email address." class="form-control" placeholder="Email...">
+                        </div>
+                        <div class="form-group">
+                            <label for="formInputDesc" id="descLabel">Description</label>
+                            <textarea id="formInputDesc" rows="5" placeholder="Brief description..." class="form-control"></textarea>
+                        </div>
+                    </div>
+
+                    <div id="guidanceS">
+                        <div class="form-group">
+                            <label for="formInputName" id="nameLabel">Name of Guidance Opportunity</label>
+                            <input id="formInputName" type="text" class="form-control" placeholder="Name...">
+                        </div>
+                        <div class="form-group">
+                            <label for="formSelectGuidance" id="gtLabel">Guidance Type</label>
+                            <select class="form-control" id="formSelectGuidance">
+                                <option></option>
+                                <option>Counselor</option>
+                                <option>Tutor</option>
+                                <option>Test Prep</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="formInputEmp" id="empLabel">Name of Employer</label>
+                            <input id="formInputEmp" type="text" class="form-control" placeholder="Employer...">
+                        </div>
+                        <div class="form-group">
+                            <label for="formInputAdd" id="addLabel">Address of Job</label>
+                            <input id="formInputAdd" type="text" class="form-control" placeholder="Address...">
+                        </div>
+                        <div class="form-group">
+                            <label for="formInputPhone" id="phoneLabel">Phone Number</label>
+                            <input id="formInputPhone" type="tel" onkeyup="formatPhone(this)" class="form-control" placeholder="(xxx)-xxx-xxxx">
+                        </div>
+                        <div class="form-group">
+                            <label for="formInputEmail" id="emailLabel">Email</label>
+                            <input id="formInputEmail" type="email" title="Please provide a valid email address." class="form-control" placeholder="Email...">
+                        </div>
+                        <div class="form-group">
+                            <label for="formInputDesc" id="descLabel">Description</label>
+                            <textarea id="formInputDesc" rows="5" placeholder="Brief description..." class="form-control"></textarea>
+                        </div>
+                    </div>
+                </form>
+                <a id="postButton" href="#" class="btn btn-primary btn-md"><img alt="" id="postIcon" src="../resources/imgs/done-24px.svg">Post</a>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+</html>

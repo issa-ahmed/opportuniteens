@@ -36,7 +36,10 @@
     /*text-shadow: 1px 1px #ffffff;*/
     font-size: 25px !important;
 }
-
+.btn, .btn:focus, .btn:active {
+    outline: none !important;
+    box-shadow: none !important;
+}
 #listing {
     background-color: #07B9C6;
     color: white !important;
@@ -55,65 +58,58 @@ html, body {
     width: 100% !important;
     font-family: sans-serif;
 }
-
 #home {
     z-index: 1 !important;
     background: url("../resources/imgs/nightsky.jpg") no-repeat 50% 50% !important;
-    filter: blur(8px);
-    -webkit-filter: blur(8px);
+    filter: blur(4px);
+    -webkit-filter: blur(4px);
     display: table !important;
     height: 100% !important;
     width: 100% !important;
     position: fixed !important;
     background-size: cover !important;
 }
-
-#wrap {
-    z-index: 2 !important;
+#container {
     display: table;
     position: absolute;
-    height: 55%;
-    width: 60%;
-    background-color: ghostwhite;
-    border-radius: 30px;
-    top: 20vh;
-    left: 20vw;
-    overflow-y: scroll;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
 }
-
-#searchButton {
-    position: absolute;
+#middle {
+    display: table-cell;
+    vertical-align: middle;
+}
+#wrap {
+    z-index: 2 !important;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 55%;
+    height: 450px;
+    background-color: white;
+    border-radius: 30px;
+    overflow-y: auto;
+}
+#jobsS, #volunteeringS, #internshipsS, #extracurricularsS, #guidanceS, #payperhour {
+    display: none;
+}
+#searchButton, #postButton {
+    position: relative;
     right: 0;
     bottom: 0;
     margin-bottom: 15px;
     margin-right: 15px;
-    background: white;
+    background: #07C674;
     color: black;
+    text-decoration: none !important;
 }
-#searchIcon {
+#searchIcon, #postIcon {
     margin-left: -5px;
     transform: scale(0.95);
 }
 
-@media (max-height: 768px) {
-    #wrap {
-        height: 70%;
-        width: 60%;
-        top: 17.5vh;
-        left: 20vw;
-    }
-}
-
 @media (max-width: 700px) {
-    #listing {
-        width: 40%;
-        text-align: center;
-    }
-    #contact, #about {
-        margin-left: 11px !important;
-    }
-}
-@media (max-width: 699px) {
     #listing {
         width: 100%;
         text-align: center;
@@ -124,16 +120,41 @@ html, body {
     .navbar-nav.ml-auto li a:hover {
         transform: scale(1.02);
     }
-    #wrap {
-        height: 65%;
-        width: 60%;
-        top: 17.5vh;
-        left: 20vw;
-    }
 }
 @media (max-width: 576px) {
     #listing {
-        width: 25%;
+        width: 40%;
+        text-align: center;
+    }
+    #contact, #about {
+        margin-left: 11px !important;
+    }
+    .navbar-nav.ml-auto li a:hover {
+        transform: scale(1.02);
+    }
+    #headingText {
+        font-size: 5.5vw;
+        padding-top: 5px;
+    }
+    #wrap {
+        max-width: 70%;
+    }
+}
+@media (max-width: 375px) and (max-height: 812px) {
+    #listing {
+        width: 40%;
+        text-align: center;
+    }
+    #contact, #about {
+        margin-left: 11px !important;
+    }
+    .navbar-nav.ml-auto li a:hover {
+        transform: scale(1.02);
+    }
+}
+@media (max-width: 320px) and (max-height: 568px) {
+    #listing {
+        width: 40%;
         text-align: center;
     }
     #contact, #about {
@@ -143,50 +164,6 @@ html, body {
         transform: scale(1.02);
     }
     #wrap {
-        height: 55%;
-        width: 60%;
-        top: 20vh;
-        left: 20vw;
-    }
-}
-@media (max-width: 575px) {
-    #wrap {
-        height: 70%;
-        width: 60%;
-        top: 15vh;
-        left: 20vw;
-    }
-}
-@media (max-width: 451px) {
-    #wrap {
-        height: 70%;
-        width: 60%;
-        top: 15vh;
-        left: 15vw;
-    }
-}
-@media (max-height: 640px) {
-    #wrap {
-        height: 75%;
-        width: 60%;
-        top: 15vh;
-        left: 20vw;
-    }
-}
-@media (max-height: 601px) {
-    #wrap {
-        height: 75%;
-        width: 60%;
-        top: 15vh;
-        left: 20vw;
-    }
-}
-
-@media (max-width: 321px) {
-    #wrap {
-        height: 80%;
-        width: 60%;
-        top: 15vh;
-        left: 10vw;
+        margin-top: 50px;
     }
 }
