@@ -89,6 +89,7 @@ html, body {
     height: 450px;
     background-color: white;
     border-radius: 30px;
+    overflow-y: auto;
 }
 #jobsS, #volunteeringS, #internshipsS, #extracurricularsS, #guidanceS, #payperhour {
     display: none;
